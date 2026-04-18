@@ -1,0 +1,52 @@
+Partie A qst : 
+
+1) le nombre d'action possible est 6 
+2) il represente un espace discret de 500 (?)
+3) Du fait qu'il permet à beaucoup d'actions qui peuvent etre aléatoires + des obstacles qu'il ne faut pas franchir du type mur + d'un but (passager qu'il faut déplacer)
+
+Partie B qst :
+
+1) Les performances restent faibles et on le voit dans la fonction reward qui retourne des valeurs négatives, car la politiques n'est pas claire pour atteindre le but
+2) les tours sur soi meme sont assez récurrents 
+
+Partie C qst : 
+
+1) Filtrer les actions permet de voir uniquement les actions possibles et donc réduire les fois ou la reward va etre ajoutée négativement 
+2) Elle reste limitée car le choix d'action reste aléatoire, et s'il est aléatoire alors le taxi peut tjr s'éloigner du passager que ça soit pour le faire monter ou le rendre a sa destination 
+
+Part D qst :
+
+1) les emplacements : celle du taxi, celle des arrivées, le fait que le passager est dans le taxi ou pas
+2) Rentrer dans un mur a droite a gauche en haut et en bas dans le cas minimal + un algo de pathfinding peut etre pour trouver la case d'arret finale
+
+Part E qst : 
+
+1) du fait que le retour unwrapped est sous forme de dictionnaire énormissime 
+2) 
+
+Partie F qst :
+
+1) A cause de l'explosion combinatoire, c'est comme chercher une aiguille dans une botte de foin
+2) eliminer les "mauvais" trajets, mais malheureusement ne pas sanctionner une mauvaise action ne permet pas a l'agent de comprendre que le trajet pris n'est pas optimal ou viable 
+
+Partie G qst : 
+
+1) Car cette politique permet dans les grandes lignes uniquement à ne pas rentrer dans les murs, mais n'aide pas vraiment a trouver la sortie 
+2) Soit il nous faut un algo de pathfinding, soit il nous faut savoir quelles sont les cases sur lesquelles on a déjà passé, comme ça a force de tourner on aura crée un semblant de "map" qui sert a orienter les recherches suivantes 
+
+Partie H qst :
+
+1) le fait qu'on rajoute une mémoire permet à l'agent de reconnaitre des emplacements qu'il a déjà pu visiter et donc orienter ses efforts vers des places qu'il n'a pas encore pu découvrir et éventuellement s'approcher de la sortie
+2) 
+
+Partie I qst :
+
+1) le plus adapté serait l'univers du taxi, il s'agit de donner des conditions du type if else, alors que le mpiniGrid demande plus de réflexions et de techniques de pathfinding 
+
+Questions de synthèses : 
+
+1) Une politique est la "stratégie" que l'agent doit suivre 
+2) Car Taxi v3 se base plus sur des if else en terme de stratégie 
+3) car la grille est grande et parce que les possibilités sont énormes
+4) On ne peut pas tout prévoir quand on code ces conditions à la main, de plus ça prend beaucoup de temps et faut visionner des videos pour savoir ou l'agent peut se tromper, et en voir plusieurs meme…
+
